@@ -151,9 +151,8 @@ Still inside the activated `env` environment:
     ```powershell
     # Ensure (./env) is active!
     $env:CMAKE_ARGS="-DLLAMA_CUBLAS=on"
-    # CUDA_CXX will typically be found via system CUDA_PATH if set correctly
-    # but explicitly setting it can override if needed:
-    # $env:CUDA_CXX="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin\nvcc.exe"
+    # This line is crucial for explicitly pointing to the CUDA compiler:
+    $env:CUDA_CXX="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin\nvcc.exe"
     ```
 
 2.  **Installation via pip:**
