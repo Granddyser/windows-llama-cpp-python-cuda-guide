@@ -51,8 +51,8 @@ Check your NVIDIA drivers and any system-installed CUDA Toolkits.
 `llama-cpp-python` requires a C++ compiler. Visual Studio 2019 is recommended.
 
 1.  **Download:** Download **Visual Studio 2019 Community Edition** directly from archive.org:
-    *   **[Download Visual Studio 2019 Community (ISO) from archive.org](https://archive.org/details/vs_community__e8aae2bc1239469a8cb34a7eeb742747)**
-    *   Mount the ISO and run `vs_setup.exe`.
+    *   **[Download Visual Studio 2019 Community installer from archive.org](https://archive.org/details/vs_community__e8aae2bc1239469a8cb34a7eeb742747)**
+   
 
 2.  **Installation – Workloads & Components:**
     *   Select the workload **"Desktop development with C++"**.
