@@ -7,7 +7,7 @@ Since I couldn't find a comprehensive guide or a reliable solution to get `llama
 
 ## 🌟 Highlights of This Guide
 
-*   **Local, Deletable Conda Environment:** Environment created directly in the project folder for easy cleanup (using `conda create --prefix ./env2`).
+*   **Local, Deletable Conda Environment:** Environment created directly in the project folder for easy cleanup (using `conda create --prefix ./env`).
 *   **Specific CUDA Toolkit Installation via Conda:** Uses `conda install nvidia/label/cuda-12.1.0::cuda-toolkit`.
 *   **Precise PyTorch Installation for CUDA 12.1:** Uses `pip3 install torch --index-url https://download.pytorch.org/whl/cu121`.
 *   **Precise Visual Studio 2019 Configuration:** Exact specification of required components with a direct download link.
