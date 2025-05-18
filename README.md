@@ -61,9 +61,8 @@ Check your NVIDIA drivers and any system-installed CUDA Toolkits.
         *   `Windows 10 SDK (e.g., 10.0.19041.0)`
         *   **`Windows 11 SDK (e.g., 10.0.22000.0 or newer)` – Crucial!**
         *   `C++ CMake tools for Windows`
-        *(Refer to the screenshot in previous discussions if needed for a visual guide of more components like Profiling tools, ATL, AddressSanitizer which are good to have but the SDK and build tools are key).*
 
-### 1.3. CMake Installation (System-Level)
+              ### 1.3. CMake Installation (System-Level)
 *   **Download CMake Version 3.31.7:**
     *   **[Download cmake-3.31.7-windows-x86_64.msi from GitHub](https://github.com/Kitware/CMake/releases/download/v3.31.7/cmake-3.31.7-windows-x86_64.msi)**
 *   During installation, enable **"Add CMake to the system PATH for all users"**.
