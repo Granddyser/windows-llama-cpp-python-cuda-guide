@@ -212,4 +212,4 @@ Still inside the activated `env2` environment:
 ---
 
 This guide was created based on the information provided and the specified corrections.
-Last Updated: [Enter Current Date]
+Last Updated: May 2025
