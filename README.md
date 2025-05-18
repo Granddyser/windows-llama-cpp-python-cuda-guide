@@ -79,7 +79,7 @@ This system-level installation helps the C++ build tools find `nvcc`.
 This is critical for `nvcc` to be found by the build process.
 
 1.  **Open Environment Variables:** Search "Edit the system environment variables".
-2.  **Set/Check `CUDA_PATH` (System Variable):**
+2.  **Set/Check `CUDA_PATH` and `CUDA_PATH_v_1_x_xx`(System Variable):**
     *   Name: `CUDA_PATH`
     *   Value: `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1`
 3.  **Edit `Path` Variable (System Variables):**
@@ -102,28 +102,28 @@ This is critical for `nvcc` to be found by the build process.
     cd D:\AI\LlamaCPPProject
     ```
 
-2.  **Create Local Conda Environment (named `env2` inside project):**
+2.  **Create Local Conda Environment (named `env` inside project):**
     This is key for easy deletion if things go wrong.
     ```powershell
     # Important: Use the x64 version of PowerShell
-    conda create --prefix ./env2 python=3.11
+    conda create --prefix ./env python=3.11
     ```
 
 3.  **Activate Conda Environment:**
     ```powershell
-    conda activate ./env2 
-    # Or from the project root: conda activate .\env2
+    conda activate ./env 
+    # Or from the project root: conda activate .\env
     ```
-    Your PowerShell prompt should change to show `(./env2)`.
+    Your PowerShell prompt should change to show `(./env)`.
 
 ## 3. Install CUDA Toolkit and PyTorch into Conda Environment
 
-Now, inside the activated `env2` environment:
+Now, inside the activated `env` environment:
 
 1.  **Install CUDA Toolkit 12.1.0 via Conda:**
     This provides the CUDA runtime libraries specifically for this environment.
     ```powershell
-    # Ensure (./env2) is active
+    # Ensure (./env) is active
     conda install nvidia/label/cuda-12.1.0::cuda-toolkit -c nvidia/label/cuda-12.1.0
     ```
     *Note: The channel specification `-c nvidia/label/cuda-12.1.0` might be redundant if the package name already includes it, but it ensures the correct source.*
@@ -131,7 +131,7 @@ Now, inside the activated `env2` environment:
 2.  **Install PyTorch for CUDA 12.1 (NO AUDIO, NO VISION):**
     This specific command installs PyTorch compiled for CUDA 12.1. `pip3` is often an alias for `pip` within Conda environments. Use `pip` if `pip3` is not found.
     ```powershell
-    # Ensure (./env2) is active
+    # Ensure (./env) is active
     pip3 install torch --index-url https://download.pytorch.org/whl/cu121
     # If pip3 gives an error, try:
     # pip install torch --index-url https://download.pytorch.org/whl/cu121
@@ -139,12 +139,12 @@ Now, inside the activated `env2` environment:
 
 ## 4. Install `llama-cpp-python` with CUDA
 
-Still inside the activated `env2` environment:
+Still inside the activated `env` environment:
 
 1.  **Set Build Arguments in PowerShell:**
     These instruct `pip` to compile `llama-cpp-python` with CUDA support (CUBLAS) and to use the system's `nvcc.exe` (found via `CUDA_PATH`).
     ```powershell
-    # Ensure (./env2) is active!
+    # Ensure (./env) is active!
     $env:CMAKE_ARGS="-DLLAMA_CUBLAS=on"
     # CUDA_CXX will typically be found via system CUDA_PATH if set correctly
     # but explicitly setting it can override if needed:
@@ -154,16 +154,16 @@ Still inside the activated `env2` environment:
 2.  **Installation via pip:**
     Use `pip` (or `pip3` if that's your preference and it works in your Conda env).
     ```powershell
-    # Ensure (./env2) is active
+    # Ensure (./env) is active
     pip install llama-cpp-python[server] --upgrade --force-reinstall --no-cache-dir
     ```
     This process might take some time. Look for "Successfully built llama-cpp-python".
 
 ## 5. Verify Installation
 
-1.  **Start Python in your activated Conda environment (`env2`):**
+1.  **Start Python in your activated Conda environment (`env`):**
     ```powershell
-    # Ensure (./env2) is active
+    # Ensure (./env) is active
     python
     ```
 
@@ -202,7 +202,7 @@ Still inside the activated `env2` environment:
 
 2.  **Start Application (Example with Python server):**
     ```powershell
-    # Ensure (./env2) is active!
+    # Ensure (./env) is active!
     # Ensure $env:CMAKE_ARGS="-DLLAMA_CUBLAS=on" is set in this PowerShell session
     
     python -m llama_cpp.server --model D:\AI\LlamaCPPProject\models\YOUR_MODEL.gguf --n_gpu_layers -1 
