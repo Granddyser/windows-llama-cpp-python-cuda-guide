@@ -93,7 +93,7 @@ This is critical for `nvcc` to be found by the build process.
     # Should show 12.1
     ```
 
-## 2. Create Project and Local Conda Environment
+## 2. Create Project and Local Conda Environment in Powershellx64
 
 1.  **Create Project Folder:**
     ```powershell
