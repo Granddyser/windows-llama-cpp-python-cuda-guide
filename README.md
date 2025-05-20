@@ -65,7 +65,7 @@ Check your NVIDIA drivers and any system-installed CUDA Toolkits.
     
     ![VS2019 Components Selection](images/image.png)
     *This screenshot shows the required components you need to select during installation.*
-              ### 1.3. CMake Installation (System-Level)
+   
 
 
 ### 1.3. CMake Installation (System-Level)
