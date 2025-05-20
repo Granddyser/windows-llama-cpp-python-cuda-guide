@@ -64,6 +64,7 @@ Check your NVIDIA drivers and any system-installed CUDA Toolkits.
         **Example of selected components:**
     
     ![VS2019 Components Selection](images/image.png)
+
     *This screenshot shows the required components you need to select during installation.*
    
 
