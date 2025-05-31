@@ -240,7 +240,7 @@ While this guide uses **CUDA 12.1** (because it worked reliably for this specifi
 - **CUDA 12.6:** Current stable PyTorch official support and modern projects  
 - **CUDA 12.8:** Latest stable version for cutting-edge frameworks and newest GPUs
 
-<a name="critical-setup-requirements"></a>
+
 ##Critical Setup Requirements:
 1. **System Environment Variables:** 
    - Configure `CUDA_PATH`, `CUDA_HOME` pointing to your primary CUDA version
