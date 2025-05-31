@@ -273,9 +273,9 @@ While this guide uses **CUDA 12.1** (because it worked reliably for this specifi
    ```
    Result: With this setup, you can clone and run almost any AI project from GitHub without build issues or CUDA compatibility problems.
 
-   # ⚠️ I have CUDA 11.8, 12.4, and 12.8 installed on my system – you can install as many CUDA versions side by side as you like!
-   # ⚠️ [See critical setup requirements above](#critical-setup-requirements) on configuring your system environment variables (CUDA_PATH, CUDA_HOME, Path)!
-   # Always make sure these point to the CUDA version you want to use.
+    ⚠️ I have CUDA 11.8, 12.4, and 12.8 installed on my system – you can install as many CUDA versions side by side as you like!
+    ⚠️ [See critical setup requirements above](#critical-setup-requirements) on configuring your system environment variables (CUDA_PATH, CUDA_HOME, Path)!
+    Always make sure these point to the CUDA version you want to use.
 
    This guide was created based on the information provided and the specified corrections.
    Last Updated: June 2025
