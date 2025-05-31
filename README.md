@@ -241,7 +241,7 @@ While this guide uses **CUDA 12.1** (because it worked reliably for this specifi
 - **CUDA 12.8:** Latest stable version for cutting-edge frameworks and newest GPUs
 
 
-##Critical Setup Requirements:
+## Critical Setup Requirements:
 1. **System Environment Variables:** 
    - Configure `CUDA_PATH`, `CUDA_HOME` pointing to your primary CUDA version
    - Add all CUDA `bin` directories to the system **"Path"** variable (found in System Environment Variables)
