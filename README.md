@@ -216,5 +216,50 @@ Still inside the activated `env` environment:
 
 ---
 
+## 💡 Bonus Strategy: Universal AI Project Compatibility ⚡⚡⚡
+
+### Better CUDA Version Strategy for AI/ML Projects
+
+While this guide uses **CUDA 12.1** (because it worked reliably for this specific setup), here's a more universal approach for Windows AI/ML development:
+
+> **Recommendation:** Install **CUDA 11.8, 12.4, and 12.6** on your system. These three versions cover compatibility with almost every AI project you'll encounter.
+
+**Why These Specific Versions?**
+- **CUDA 11.8:** Compatible with most older AI frameworks and models
+- **CUDA 12.4:** Covers many current PyTorch builds and modern projects  
+- **CUDA 12.6:** Latest stable version for cutting-edge frameworks
+
+**Critical Setup Requirements:**
+1. **System Environment Variables:** 
+   - Configure `CUDA_PATH`, `CUDA_HOME` pointing to your primary CUDA version
+   - Add all CUDA `bin` directories to the system **"Path"** variable (found in System Environment Variables)
+
+2. **Install PyTorch with exact version matching:**
+
+   **For pip users:**
+   ```powershell
+   # CUDA 11.8
+   pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu118
+   
+   # CUDA 12.4
+   pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+   
+   # CUDA 12.6
+   pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+   ```
+ 
+
+   **For conda users:**
+   ```powershell
+   # CUDA 11.8
+   conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=11.8 -c pytorch -c nvidia
+
+   # CUDA 12.1
+   conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.1 -c pytorch -c nvidia
+
+   # CUDA 12.4
+   conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.4 -c pytorch -c nvidia
+   ```
+
 This guide was created based on the information provided and the specified corrections.
-Last Updated: May 2025
+Last Updated: June 2025
