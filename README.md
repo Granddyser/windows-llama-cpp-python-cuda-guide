@@ -260,8 +260,8 @@ While this guide uses **CUDA 12.1** (because it worked reliably for this specifi
    ```
 
    **For conda users:**
-   # CUDA 11.8
    ```powershell
+   # CUDA 11.8
    conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 
    # CUDA 12.1 (for this guide - uses pre-built wheels)
