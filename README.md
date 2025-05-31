@@ -240,6 +240,7 @@ While this guide uses **CUDA 12.1** (because it worked reliably for this specifi
 - **CUDA 12.6:** Current stable PyTorch official support and modern projects  
 - **CUDA 12.8:** Latest stable version for cutting-edge frameworks and newest GPUs
 
+<a name="critical-setup-requirements"></a>
 **Critical Setup Requirements:**
 1. **System Environment Variables:** 
    - Configure `CUDA_PATH`, `CUDA_HOME` pointing to your primary CUDA version
@@ -271,6 +272,10 @@ While this guide uses **CUDA 12.1** (because it worked reliably for this specifi
    conda install pytorch torchvision torchaudio pytorch-cuda=12.6 -c pytorch -c nvidia
    ```
    Result: With this setup, you can clone and run almost any AI project from GitHub without build issues or CUDA compatibility problems.
+
+   # ⚠️ I have CUDA 11.8, 12.4, and 12.8 installed on my system – you can install as many CUDA versions side by side as you like!
+   # ⚠️ [See critical setup requirements above](#critical-setup-requirements) on configuring your system environment variables (CUDA_PATH, CUDA_HOME, Path)!
+   # Always make sure these point to the CUDA version you want to use.
 
    This guide was created based on the information provided and the specified corrections.
    Last Updated: June 2025
