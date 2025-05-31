@@ -222,12 +222,23 @@ Still inside the activated `env` environment:
 
 While this guide uses **CUDA 12.1** (because it worked reliably for this specific setup), here's a more universal approach for Windows AI/ML development:
 
-> **Recommendation:** Install **CUDA 11.8, 12.4, and 12.6** on your system. These three versions cover compatibility with almost every AI project you'll encounter.
+> **Recommendation:** Install **CUDA 11.8, 12.6, and 12.8** on your system. These three versions cover compatibility with almost every AI project you'll encounter.
+
+### **Understanding PyTorch Installation Options**
+
+**Two main approaches exist for PyTorch installation:**
+- **Official PyTorch Builds:** Current official support for CUDA 11.8, 12.6, and 12.8 only
+- **Pre-built Wheels:** Community/third-party wheels available for more CUDA versions (like 12.1, 12.4)
+
+**Use Cases by CUDA Version:**
+- **CUDA 11.8:** Legacy projects, older Stable Diffusion models, most GitHub repositories from 2022-2023
+- **CUDA 12.6:** Current mainstream AI projects, latest PyTorch features, balanced compatibility  
+- **CUDA 12.8:** Cutting-edge frameworks, latest GPU architectures (RTX 50xx series), experimental features
 
 **Why These Specific Versions?**
 - **CUDA 11.8:** Compatible with most older AI frameworks and models
-- **CUDA 12.4:** Covers many current PyTorch builds and modern projects  
-- **CUDA 12.6:** Latest stable version for cutting-edge frameworks
+- **CUDA 12.6:** Current stable PyTorch official support and modern projects  
+- **CUDA 12.8:** Latest stable version for cutting-edge frameworks and newest GPUs
 
 **Critical Setup Requirements:**
 1. **System Environment Variables:** 
@@ -236,30 +247,32 @@ While this guide uses **CUDA 12.1** (because it worked reliably for this specifi
 
 2. **Install PyTorch with exact version matching:**
 
-   **For pip users:**
+   **For pip users (Official PyTorch builds - Recommended):**
    ```powershell
    # CUDA 11.8
-   pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu118
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
    
-   # CUDA 12.4
-   pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+   # CUDA 12.6  
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
    
-   # CUDA 12.6
-   pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+   # CUDA 12.8
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
    ```
- 
 
    **For conda users:**
-   ```powershell
    # CUDA 11.8
-   conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=11.8 -c pytorch -c nvidia
+   ```powershell
+   conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 
-   # CUDA 12.1
-   conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.1 -c pytorch -c nvidia
+   # CUDA 12.1 (for this guide - uses pre-built wheels)
+   conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 
-   # CUDA 12.4
-   conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.4 -c pytorch -c nvidia
+   # CUDA 12.6
+   conda install pytorch torchvision torchaudio pytorch-cuda=12.6 -c pytorch -c nvidia
    ```
+   Result: With this setup, you can clone and run almost any AI project from GitHub without build issues or CUDA compatibility problems.
 
-This guide was created based on the information provided and the specified corrections.
-Last Updated: June 2025
+   This guide was created based on the information provided and the specified corrections.
+   Last Updated: June 2025
+
+   
