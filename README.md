@@ -277,6 +277,12 @@ While this guide uses **CUDA 12.1** (because it worked reliably for this specifi
     ⚠️ [See critical setup requirements above](#critical-setup-requirements) on configuring your system environment variables (CUDA_PATH, CUDA_HOME, Path)!
     Always make sure these point to the CUDA version you want to use.
 
+   :bulb::bulb::bulb::bulb:
+   **Here's an additional tip:**
+   When you clone an AI repository (e.g., for LLMs, Diffusion models, etc.), it's a good practice to first check the `requirements.txt` file (or similar dependency files). This file often specifies the exact Torch version required by the          project. Afterwards,
+   you can visit the [PyTorch - Previous Versions](https://pytorch.org/get-started/previous-versions/) page to see which CUDA version is best suited for that Torch version and find the correct installation command. This can help you avoid
+   compatibility issues from the start.          
+
    This guide was created based on the information provided and the specified corrections.
    Last Updated: June 2025
 
